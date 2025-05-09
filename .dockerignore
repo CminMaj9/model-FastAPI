@@ -1,0 +1,5 @@
+# Docker忽视文件
+.DS_Store
+venv/
+__pycache__/
+*.pyc

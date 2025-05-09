@@ -1,0 +1,45 @@
+# 1. 忽略 .env 文件 (用于存放环境变量和敏感配置)
+.env
+.env.*
+# 但是，通常会保留一个 .env.example 文件作为配置模板，这个不要忽略
+!.env.example
+
+# 2. 忽略 Python 编译缓存 和 PyTorch 可能产生的缓存
+# Python 字节码缓存
+__pycache__/
+*.pyc
+
+# 3. 忽略所有苹果 macOS 文件系统的 .DS_Store 文件
+# 这些文件用于存储文件夹的自定义属性，如图标位置或背景图片
+.DS_Store
+# 有时候也会看到 ._* 开头的文件，也可以一并忽略
+._*
+# Thumbs.db 是 Windows 下的类似文件
+Thumbs.db
+
+# 虚拟环境文件夹 (根据你使用的工具命名可能不同)
+venv/
+.venv/
+env/
+ENV/
+
+# IDE 和编辑器配置文件
+.vscode/
+.idea/ # IntelliJ IDEA, PyCharm, etc.
+*.sublime-project
+*.sublime-workspace
+
+# 日志文件
+*.log
+logs/ # 如果你把日志都放在一个叫 logs 的文件夹里
+
+# 构建产物或临时文件
+build/
+dist/
+*.egg-info/
+downloads/ # 如果你有临时的下载文件夹
+
+# 测试覆盖率报告
+.coverage
+coverage.xml
+htmlcov/
